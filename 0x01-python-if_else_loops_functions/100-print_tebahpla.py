@@ -4,4 +4,4 @@ for x in range(-122,-96):
         x = (x * -1)
     else:
         x = (x * -1) - 32
-    print(chr(x), end='')
+    print("{}".format(chr(x)), end='')
