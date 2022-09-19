@@ -5,6 +5,8 @@
 class Rectangle:
     """This is an empty class"""
     def __init__(self, width=0, height=0):
+        assert type(width) == int, f"width must be an integer "
+        assert height >= 0, f"width must be an integer"
         self.__width = width
         self.__hight = height
 
@@ -17,10 +19,10 @@ class Rectangle:
     def width(self, value):
 
         """Set width"""
-        try:
+        if type(value) == int:
             self.__width = value
-        except self.__width < 0:
-            raise ValueError
+        else:
+            raise ValueError('width must be an integer')
 
     @property
     def height(self):
@@ -31,7 +33,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Set width"""
-        try:
+        if type(value) == int:
             self.__hight = value
-        except self.__height < 0:
-            raise ValueError
+        else:
+            raise ValueError('height must be an integer')
