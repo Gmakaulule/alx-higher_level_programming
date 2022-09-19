@@ -4,14 +4,15 @@
 
 class Rectangle:
     """This is an empty class"""
-    def __init__(self, width=0, hight=0):
+    def __init__(self, width=0, height=0):
         self.__width = width
-        self.__hight = hight
+        self.__hight = height
 
+    @property
     def width(self):
         """Retrieve width"""
         return self.__width
-
+    @width.setter
     def width(self, value):
 
         """Set width"""
@@ -19,15 +20,15 @@ class Rectangle:
             self.__width = value
         except self.__width < 0:
             raise ValueError
-
-    def hight(self):
+    @property
+    def height(self):
 
         """Retrieve hight"""
-        return self.__hight
-
-    def hight(self, value):
+        return self.__height
+    @height.setter
+    def height(self, value):
         """Set width"""
         try:
             self.__hight = value
-        except self.__hight < 0:
+        except self.__height < 0:
             raise ValueError
