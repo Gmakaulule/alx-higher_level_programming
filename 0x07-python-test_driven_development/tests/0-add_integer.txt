@@ -1,0 +1,15 @@
+"""
+    >>> add(3, 4)
+    7
+    >>> add('s', 3)
+    TypeError: a must be an integer
+    
+    >>> add(5, 's')
+    TypeError: b must be an integer
+    
+    >>> add(5.00, 5.00)
+    10
+
+    >>> add(None)
+    a must be an integer
+"""
