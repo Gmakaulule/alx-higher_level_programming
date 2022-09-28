@@ -1,11 +1,17 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
-'''write a file and return number of charecers'''
+
+"""
+A module that contains a function that writes
+to a file.
+"""
 
 
 def write_file(filename="", text=""):
-    '''create a file and write on it'''
-
-    with open(filename, 'w') as file:
-        file.write(text)
-        return len(text) - 1
+    """
+    Writing into filename that value ot text
+    """
+    num_of_char = 0
+    with open(filename, "w", encoding="utf-8") as f:
+        num_of_char = f.write(str(text))
+    return num_of_char
